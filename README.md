@@ -11,7 +11,13 @@ This was built using vanilla JavaScript, Chart.js, Bulma, and Moment. It took 4.
 ## Challenges and Future Improvements
 I decided against using React because this is a relatively simple application and I wanted to keep it light weight. However, using React would have given the project more flexibility and would have allowed me to write less code.
 
-I attempted to add testing with Mocha and Chai, however, this was unsuccesful as I was not able to test functions that were nested in my 'init' function (an event listener function that ensured that the DOM had loaded before async functions were allowed to make requests to the API). If I were to do the project again, I would do it in React because I am more familiar with testing in that environment. Ultimately, I had to abandon testing because of time constraints but I plan to revist it in future.
+There is currently a slight bug with the graph, whereby if the user makes multiple requests that generate new graphs, the old graphs remain underneath the new and reappear when moused over. I am not sure at the moment why this occurs but will investigate in future.
+
+I would also like to add better error handling for when the user selects a date that is out of bounds of the database and causes a 404 error. Preventing the user from being able to select out of bounds dates or creating a pop up to say that there is no data for that date would be ideal.
+
+I attempted to add testing with Mocha and Chai, however, this was unsuccesful as I was not able to test functions that were nested in my 'init' function (an event listener function that ensured that the DOM had loaded before async functions were allowed to make requests to the API). If I were to do the project again, I would do it in React because I am more familiar with testing in that environment. 
+
+Ultimately, I had to abandon testing and some other features because of time constraints but I plan to revist the project in future.
 
 ## Key learnings
 I enjoyed revisting vanilla JavaScript as I usually work in React. Doing the project reminded me of the limitation of vanilla JavaScript, which I will take into consideration when planning future projects.
