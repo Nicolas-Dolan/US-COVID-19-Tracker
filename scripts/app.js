@@ -269,7 +269,7 @@ function init() {
       options: {
         title: {
           display: true,
-          text: 'Deaths, infections, hospitalizations, and recoveries over time'
+          text: `Deaths, infections, hospitalizations, and recoveries in ${selState} over time`
         },
         xAxes: [{
           type: 'time',
