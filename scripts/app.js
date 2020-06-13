@@ -269,7 +269,7 @@ function init() {
       options: {
         title: {
           display: true,
-          text: `Deaths, infections, hospitalizations, and recoveries in ${selState} over time`
+          text: `Deaths, infections, hospitalizations, and recoveries in ${selState.toUpperCase()} over time`
         },
         xAxes: [{
           type: 'time',
@@ -289,7 +289,10 @@ function init() {
   
   //! these event listners wait for changes to either the state or date selector inputs
   stateSelector.addEventListener('change', (event) => {
-    const target = event.target.value
+    let target = event.target.value
+    if (target !== 'US') {
+      target = target.toLowerCase()
+    }
     if (target === 'US' && selDate === 'Current') {
       getUSCurrent()
       getUSDaily()
